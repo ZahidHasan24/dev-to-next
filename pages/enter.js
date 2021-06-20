@@ -5,7 +5,7 @@ import { UserContext } from "../lib/context";
 import { useEffect, useState, useCallback, useContext } from "react";
 import _ from "lodash";
 
-export default function Enter(props) {
+const Enter = (props) => {
   const { user, username } = useContext(UserContext);
 
   // 1. user signed out <SignInButton />
@@ -25,7 +25,9 @@ export default function Enter(props) {
       )}
     </main>
   );
-}
+};
+
+export default Enter;
 
 // Sign in with Google button
 function SignInButton() {
