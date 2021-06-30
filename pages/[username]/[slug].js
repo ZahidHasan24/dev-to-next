@@ -3,7 +3,7 @@ import PostContent from "../../components/PostContent";
 import { firestore, getUserWithUsername, postToJSON } from "../../lib/firebase";
 import { useDocumentData } from "react-firebase-hooks/firestore";
 
-const Post = () => {
+const Post = (props) => {
   const postRef = firestore.doc(props.path);
   const [realtimePost] = useDocumentData(postRef);
 
